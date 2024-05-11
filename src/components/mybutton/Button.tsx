@@ -1,15 +1,15 @@
-import React, {MouseEvent} from 'react';
+import React, {MouseEvent, ReactNode} from 'react';
 
 type ButtonType = {
-    title: string
+    children: ReactNode
     callBack: () => void
 }
-export const Button = ({title, callBack}: ButtonType) => {
+export const Button = ({children, callBack}: ButtonType) => {
     const onClickHandler = () => {
         callBack()
     }
 
     return (
-        <button onClick={onClickHandler}>{title}</button>
+        <button onClick={onClickHandler}>{children}</button>
     );
 };

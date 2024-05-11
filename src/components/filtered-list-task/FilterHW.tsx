@@ -5,7 +5,7 @@ type FilterHWType = {
     filter: Function
 }
 
-type MoneyType = {
+export type MoneyType = {
     banknots: string
     value: number
     number: string
